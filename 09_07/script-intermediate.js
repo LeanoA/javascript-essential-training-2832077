@@ -53,6 +53,22 @@ const newStrapLength = (strapArray) => {
       <button>Update</button>
     `;
 
+    // Add event listener to the form submit action
+    lengthForm.addEventListener("submit", (e) => {
+      // Stop form from reloading the page
+      e.preventDefault();
+
+      // Get the value from the form input
+      let newValue = lengthForm.querySelector("input").value;
+
+      // Set the value of the field
+      listElement.querySelector("span").innerHTML = `${newValue} inches`;
+
+      //Clear the form input
+      lengthForm.querySelector("input").value = "";
+
+    });
+
     // Add form to the end of the list element
     listElement.append(lengthForm);
   });
@@ -93,7 +109,7 @@ const backpackList = backpackObjectArray.map((backpack) => {
   `;
 
   let strapLengths = backpackArticle.querySelectorAll(".backpack__strap");
-  newStrapLength(strapLengths);
+  newStrapLength( strapLengths );
 
   let button = backpackArticle.querySelector(".lid-toggle");
   let newArg = "The argument I want to pass to the callback function!";

@@ -7,4 +7,9 @@ let item = "flashlight";
 
 const collection = ["Piggy", item, 5, true];
 
+collection[2] = "camera";
+collection[collection.length] = "new item"
+collection[9] = "at the 9 position"
+console.log("pos 8 : ",collection[8]);
 console.log(collection);
+

@@ -9,3 +9,26 @@
  */
 
 
+ const deskArray = [
+    "pen",
+    "camera",
+    "phone",
+    "notebook",
+    "headphones",
+    "lightbulb",
+    "usb drive",
+  ];
+  
+lastItem = deskArray.pop();
+deskArray.unshift(lastItem);
+deskArray.sort();
+const found = deskArray.find( item => item=="camera");
+
+console.log("Original array:", deskArray);
+console.log("elemento encontrado = ", found)
+
+
+let removeItem = "notebook";
+deskArray.splice(deskArray.indexOf(removeItem),1)
+console.log("Array con elementos removidos:", deskArray);
+
